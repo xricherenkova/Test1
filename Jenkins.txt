@@ -16,4 +16,5 @@ pipeline {
                 	bat ('C:\\Test1\\build.bat')
 		}
             }
+	}
 }
