@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+	    stage('Clone'){
+	        steps{
+			dir('C:\\')
+			{
+        		bat("""
+		            git clone https://github.com/xricherenkova/Test1.git
+		            """)
+			}
+		    }
+	        }
+	    stage('Build') {
+            	steps {
+                	bat ('C:\\Test1\\build.bat')
+		}
+            }
+}
